@@ -12,7 +12,7 @@ const cSource = "\
 #include <stdio.h>\n\
 \n\
 int main(void) {\n\
-    printf(\"Hello Judge0!\\n\");\n\
+    printf(\"Hello World!\\n\");\n\
     return 0;\n\
 }\n\
 ";
@@ -21,7 +21,7 @@ const cppSource = "\
 #include <iostream>\n\
 \n\
 int main() {\n\
-    std::cout << \"hello, world\" << std::endl;\n\
+    std::cout << \"Hello World!\" << std::endl;\n\
     return 0;\n\
 }\n\
 ";
@@ -29,7 +29,7 @@ int main() {\n\
 const javaSource = "\
 public class Main {\n\
     public static void main(String[] args) {\n\
-        System.out.println(\"hello, world\");\n\
+        System.out.println(\"Hello World!\");\n\
     }\n\
 }\n\
 ";
