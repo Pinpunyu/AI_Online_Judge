@@ -1,0 +1,81 @@
+body {
+    background-color: #323232;
+}
+
+div.sidebar-wrapper{
+    background-color: #3c3836;
+    height: 50;
+}
+
+
+div.title {
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    font-size: 30px;
+    font-weight: 10;
+    color:white;
+    height: 20px;
+}
+
+
+button.Language-button{
+    height: 50px;
+    width: 50px;
+    background-color: #3c3836;
+}
+
+img.svg-pic {
+    height: 40px;
+    width: 35px;
+}
+
+h1.setting-h{
+    color: #ead9b3;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    font-size: 30px;
+    font-weight: 10;
+}
+
+
+.editor-container {
+    height: 540px;
+    position: fixed;
+    margin-bottom: 0px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+#editor {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-size: 28px;
+}
+
+select.dropdownlist{
+    background-color: #3c3836;
+}
+
+.form-control {
+    display: block;
+    width: 50%;
+    color: #ead9b3;
+    background-color: #1d2021;
+    background-clip: padding-box;
+    border: 0px solid #ced4da;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.form-control-lg {
+    height: calc(2.875rem + 2px);
+    padding: 0.375rem 0.05rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+}
+
+
