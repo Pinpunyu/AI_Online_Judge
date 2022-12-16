@@ -4,7 +4,8 @@ body {
 
 div.sidebar-wrapper{
     background-color: #3c3836;
-    height: 50;
+    height: 55px;
+    width: 100%;
 }
 
 
@@ -15,37 +16,69 @@ div.title {
     font-weight: 10;
     color:white;
     height: 20px;
+    margin-top: 5px;
+    margin-right: 30px;
 }
 
+div.Language-button{
+    height: 55px;
+    width: 55px;
+}
 
-button.Language-button{
-    height: 50px;
-    width: 50px;
-    background-color: #3c3836;
+#java{
+    background-color: #ebdab4;
 }
 
 img.svg-pic {
     height: 40px;
     width: 35px;
+    margin-top: 6px;
+    margin-left: 9px;
 }
 
-h1.setting-h{
-    color: #ead9b3;
+.form-control {
+    display: block;
+    width: 50%;
+    color: white;
+    background-color: #3c3836;
+    border: 0px solid #ced4da;
+}
+
+.form-control-lg {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+
+select {
+    margin-top: 0px;
+    width: 200px;
+    height: 40px;
+    line-height: 50px;
+}
+
+input {
+    margin-right: -150px;
+}
+
+button.btn{
+    background-color: #ebdab4;
     font-family: "Comic Sans MS";
     font-weight: bold;
-    font-size: 30px;
-    font-weight: 10;
+    font-size: 15px;
+    height: 35px;
+    margin-top: 3px;
 }
 
 
 .editor-container {
-    height: 540px;
     position: fixed;
     margin-bottom: 0px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
+    height: 700px;
     width: 100%;
 }
 
@@ -56,26 +89,32 @@ h1.setting-h{
     font-size: 28px;
 }
 
-select.dropdownlist{
+div.middle-wrapper {
+    background-color: #323232;
+    height: 50;
+}
+
+div.output{
     background-color: #3c3836;
+    font-family: "Comic Sans MS";
+    font-weight: bold;
+    font-size: 20px;
+    font-weight: 10;
+    color: white;
+    height: 30px;
+    margin-top: 18px;
+    margin-right: 30px;
+    margin-left: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-.form-control {
-    display: block;
-    width: 50%;
-    color: #ead9b3;
-    background-color: #1d2021;
-    background-clip: padding-box;
-    border: 0px solid #ced4da;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
 
-.form-control-lg {
-    height: calc(2.875rem + 2px);
-    padding: 0.375rem 0.05rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    border-radius: 0.3rem;
+
+div.output-wrapper {
+    background-color: #3c3836;
+    height: 160px;
+    width: 100%;
 }
 
 

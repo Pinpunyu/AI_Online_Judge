@@ -1,10 +1,14 @@
 var editor = ace.edit('editor');
 editor.setAutoScrollEditorIntoView(true);
-editor.setTheme("ace/theme/idle_fingers");
+editor.setTheme("ace/theme/monokai");
 editor.getSession().setMode("ace/mode/java");
+const annotation = "\
+/* \n\
+ * Author 		: Pinpunyu , YuiArthur , A1095551 , A1095552\n\
+ * Project Name : Online Judge with AI suggest\n\
+ */\n\n";
 
 const cSource = "\
-// Powered by Judge0\n\
 #include <stdio.h>\n\
 \n\
 int main(void) {\n\
@@ -31,6 +35,7 @@ public class Main {\n\
 ";
 
 
+
 function setLanguage(Language) {
 	// editor.setTheme("ace/theme/cobalt");
 
@@ -38,23 +43,32 @@ function setLanguage(Language) {
 
 		case "c":
 			editor.getSession().setMode("ace/mode/c_cpp");
-			editor.setValue(cSource);
+			editor.setValue(annotation + cSource);
+			document.getElementById("c").style.backgroundColor="#ebdab4";
+			document.getElementById("cpp").style.backgroundColor="#3c3836";
+			document.getElementById("java").style.backgroundColor="#3c3836";
 			break;
 
 		case "cpp":
 			editor.getSession().setMode("ace/mode/c_cpp");
-			editor.setValue(cppSource);
+			editor.setValue(annotation + cppSource);
+			document.getElementById("c").style.backgroundColor="#3c3836";
+			document.getElementById("cpp").style.backgroundColor="#ebdab4";
+			document.getElementById("java").style.backgroundColor="#3c3836";
 			break;
 
 		case "java":
-		editor.getSession().setMode("ace/mode/java");
-			editor.setValue(javaSource);
+			editor.getSession().setMode("ace/mode/java");
+			editor.setValue(annotation + javaSource);
+			document.getElementById("c").style.backgroundColor="#3c3836";
+			document.getElementById("cpp").style.backgroundColor="#3c3836";
+			document.getElementById("java").style.backgroundColor="#ebdab4";
 			break;
 	}
 } 
 
 
-
+setLanguage("c");
 
 /*
 	'dracula' => 'Dracula',

@@ -12,67 +12,77 @@
   <body>
 
     <div class="background">
-      <div class="sidebar-wrapper d-flex" style="border-bottom: 1px solid #3c3836;">
+      <div class="sidebar-wrapper d-flex">
       
-        <div class="title flex-grow-1">ᐛ Online Judge</div>
+        <div class="title">ᐛ Online Judge</div>
         
-        
-
-        <div class="button-flex-end justify-content-end">
-          <button class="Language-button" onclick="setLanguage('c')">
-          <img class="svg-pic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/926px-C_Programming_Language.svg.png"/>
-          </button>
+        <div class="button-flex-end justify-content-end" >
+          <div class="Language-button" id="c" onclick="setLanguage('c')">
+            <img class="svg-pic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/C_Programming_Language.svg/926px-C_Programming_Language.svg.png"/>
+          </div>
         </div>
 
         <div class="button-flex-end justify-content-end">
-          <button class="Language-button" onclick="setLanguage('cpp')">
+          <div class="Language-button" id="cpp" onclick="setLanguage('cpp')" >
             <img class="svg-pic" src="https://cdn.worldvectorlogo.com/logos/c.svg"/>
-          </button>
+          </div>
         </div>
 
-        <div class="button-flex-end justify-content-end">
-          <button class="Language-button" onclick="setLanguage('java')">
+        <div class="button-flex-end justify-content-end" style="margin-right: 30px;">
+          <div class="Language-button" id="java" onclick="setLanguage('java')">
             <img class="svg-pic" src="https://www.svgrepo.com/show/184143/java.svg" />
-          </button>
+          </div>
         </div>
+
+        <div class="setting menu ">
+          <form class="form-inline " action="" method="post" enctype="multipart/form-data">
+            <div class="item" >
+              <div class="ui dropdown selection"  tabindex="0">
+                <select class="dropdownlist" style="border-radius: 10px; margin-top: 5px;" >
+                  <option value="" selected disabled hidden>Promble</option>
+                  <option value="1">A.</option>
+                  <option value="2">B.</option>
+                  <option value="3">C.</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group" style="margin-left:880px;">
+              <input class="form-control form-control-lg" id="formFileLg" type="file" accept=".cpp ,.java ,.c" />
+            </div>
+            <div class="submit-button justify-content-end bd-highlight">
+              <button type="submit" class="btn justify-content-end">Submet</button>
+            </div>
+            
+          </form>
+          
+        </div>
+        
+        
       </div>
       
       <div class="host-wrapper d-flex">
         <div class="editor-container flex-grow-1">
-          <div id="editor">public class Main {
-    public static void main(String[] args) {
-        System.out.println("hello, world");
-    }
-}         </div>
+          <div id="editor"> </div>
 
       
         </div>
 
         
       </div>
-      
-      <div class="setting flex-grow-1">
-        <h1 class="setting-h">Setting</h1>
+
+      <div class="middle-wrapper  d-flex" style="border-bottom: 1px solid #3c3836;">
+
+        <div class="output align-self-end">Output</div>
+
         
-        <form action="fileupload" method="post" enctype="multipart/form-data">
-          
-          <div class="input-group">
-            <select class="dropdownlist">
-              <option value="" selected disabled hidden>Promble</option>
-              <option value="1">A.</option>
-              <option value="2">B.</option>
-              <option value="3">C.</option>
-            </select>
-          </div>
-          
-          <div class="submit-button">
-            <input class="form-control form-control-lg" id="formFileLg" type="file" accept=".cpp ,.java ,.c" />
-            <button type="submit" class="btn btn-primary">Submet</button>
-          </div>
-        </form>
+        </div>
+      <div class="output-wrapper">
+      
       </div>
       
     </div>
+
+    
 
     
     
