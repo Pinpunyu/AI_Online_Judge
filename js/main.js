@@ -67,6 +67,24 @@ function setLanguage(Language) {
 	}
 } 
 
+function selectTextFile(files) {
+
+	var filename = document.getElementById('formFileLg').files.item(0).name;
+	setLanguage(filename.split('.')[1]);
+
+    if (!files.length) {
+        return false;
+    }
+    
+    let file    = files[0];
+    let reader = new FileReader();
+    reader.onload = function () {
+		editor.setValue(this.result);
+    };
+    
+    reader.readAsText(file);
+}
+
 
 setLanguage("c");
 
