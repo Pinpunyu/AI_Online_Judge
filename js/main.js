@@ -1,6 +1,6 @@
 var editor = ace.edit('editor');
 editor.setAutoScrollEditorIntoView(true);
-editor.setTheme("ace/theme/monokai");
+editor.setTheme("ace/theme/gruvbox");
 editor.getSession().setMode("ace/mode/java");
 const annotation = "\
 /* \n\
