@@ -93,7 +93,7 @@ function saveDynamicDataToFile() {
 	//formData.append('file', blob, 'readme.txt');
 
 	const request = new XMLHttpRequest();
-	request.open('POST', 'http://140.127.208.185/OnlineJudge/fileupload');
+	request.open('POST', './fileupload');
 	request.send(blob);
 	// var blob = new Blob([code], {
 	// 	type: "text/plain;charset=utf-8",
