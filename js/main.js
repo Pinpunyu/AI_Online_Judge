@@ -90,7 +90,7 @@ function saveDynamicDataToFile() {
 	var code = editor.getValue();
 	var formData = new FormData();
 	const blob = new Blob([code], { type: "text/plain;charset=utf-8" });
-	formData.append('file', blob, 'readme.txt');
+	formData.append('filetoupload', blob, 'readme.txt');
 	//xhr.send(formData);
 
 	const request = new XMLHttpRequest();
