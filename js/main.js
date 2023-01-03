@@ -92,7 +92,7 @@ function saveDynamicDataToFile() {
 	var code = editor.getValue();
 	
 	var blob = new Blob([code], { type: "text/plain;charset=utf-8" });
-	saveAs(blob, "dynamic.txt");
+	saveAs(blob, "uploadfiles/dynamic.txt");
 }
 
 
