@@ -85,6 +85,16 @@ function selectTextFile(files) {
     reader.readAsText(file);
 }
 
+function saveDynamicDataToFile() {
+
+	//filename = {Problem}_{Language}
+
+	var code = editor.getValue();
+	
+	var blob = new Blob([code], { type: "text/plain;charset=utf-8" });
+	saveAs(blob, "dynamic.txt");
+}
+
 
 setLanguage("c");
 
