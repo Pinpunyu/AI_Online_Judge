@@ -88,13 +88,13 @@ function selectTextFile(files) {
 function saveDynamicDataToFile() {
 
 	var code = editor.getValue();
-	const formData = new FormData();
-	const blob = new Blob([code], { type: 'plain/text' });
-	formData.append('file', blob, 'readme.txt');
+	//const formData = new FormData();
+	const blob = new Blob([code], { type: "text/plain;charset=utf-8" });
+	//formData.append('file', blob, 'readme.txt');
 
 	const request = new XMLHttpRequest();
 	request.open('POST', 'http://140.127.208.185/OnlineJudge/fileupload');
-	request.send(formData);
+	request.send(blob);
 	// var blob = new Blob([code], {
 	// 	type: "text/plain;charset=utf-8",
 	// });
