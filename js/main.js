@@ -43,7 +43,7 @@ function setLanguage(Language) {
 		case "c":
 			code_language = "c";
 			editor.getSession().setMode("ace/mode/c_cpp");
-			//editor.setValue(annotation + cSource);
+			editor.setValue(annotation + cSource);
 			document.getElementById("c").style.backgroundColor="#ebdab4";
 			document.getElementById("cpp").style.backgroundColor="#3c3836";
 			document.getElementById("java").style.backgroundColor="#3c3836";
@@ -52,7 +52,7 @@ function setLanguage(Language) {
 		case "cpp":
 			code_language = "cpp";
 			editor.getSession().setMode("ace/mode/c_cpp");
-			//editor.setValue(annotation + cppSource);
+			editor.setValue(annotation + cppSource);
 			document.getElementById("c").style.backgroundColor="#3c3836";
 			document.getElementById("cpp").style.backgroundColor="#ebdab4";
 			document.getElementById("java").style.backgroundColor="#3c3836";
@@ -61,6 +61,7 @@ function setLanguage(Language) {
 		case "java":
 			code_language = "java";
 			editor.getSession().setMode("ace/mode/java");
+			editor.setValue(annotation + javaSource);
 			document.getElementById("c").style.backgroundColor="#3c3836";
 			document.getElementById("cpp").style.backgroundColor="#3c3836";
 			document.getElementById("java").style.backgroundColor="#ebdab4";
@@ -89,7 +90,7 @@ function selectTextFile(files) {
 function saveDynamicDataToFile() {
 	//filename = {Problem}_{Language}
 	var Problemname = document.getElementById("promble").value;
-	var codefilename = Problemname+'_'+code_language+'.txt';
+	var codefilename = Problemname+'.'+code_language;
 
 	var code = editor.getValue();
 	var formData = new FormData();
@@ -104,7 +105,6 @@ function saveDynamicDataToFile() {
 
 
 setLanguage("c");
-editor.setValue(annotation);
 /*
 	'dracula' => 'Dracula',
 	'gruvbox' => 'Gruvbox',讚
