@@ -87,13 +87,24 @@ function selectTextFile(files) {
 
 function saveDynamicDataToFile() {
 
+	const fs = require('fs')
+      
+    // Data which will write in a file.
+    var code = editor.getValue();
+      
+    // Write data in 'Output.txt' .
+    fs.writeFile('/home/a10955psys/onlineJudge/uploadfiles/Output.txt', code, (err) => {
+          
+        // In case of a error throw err.
+        if (err) throw err;
+    })
 	//filename = {Problem}_{Language}
-	var code = editor.getValue();
+	
 
-	var FileSaver = require('file-saver');
-	var blob = new Blob([code], {type: "text/plain;charset=utf-8"});
-	//FileSaver.saveAs(blob, "dynamic.txt");
-	FileSaver.saveAs(blob, "/home/a10955psys/onlineJudge/uploadfiles/dynamic.txt");
+	// var FileSaver = require('file-saver');
+	// var blob = new Blob([code], {type: "text/plain;charset=utf-8"});
+	// //FileSaver.saveAs(blob, "dynamic.txt");
+	// FileSaver.saveAs(blob, "/home/a10955psys/onlineJudge/uploadfiles/dynamic.txt");
 
 	
 	//var blob = new Blob([code], { type: "text/plain;charset=utf-8" });
