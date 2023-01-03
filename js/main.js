@@ -87,19 +87,19 @@ function selectTextFile(files) {
 
 function saveDynamicDataToFile() {
 
-	const fs = require('fs')
+	// const fs = require('fs')
       
     // Data which will write in a file.
     // var code = editor.getValue();
       
-	let data = "Learning how to write in a file."
+	// let data = "Learning how to write in a file."
       
     // Write data in 'Output.txt' .
-    fs.writeFile('Output.txt', data, (err) => {
+    // fs.writeFile('Output.txt', data, (err) => {
           
-        // In case of a error throw err.
-        if (err) throw err;
-    })
+    //     // In case of a error throw err.
+    //     if (err) throw err;
+    // })
 
     // Write data in 'Output.txt' .
     // fs.writeFile('./uploadfiles/Output.txt', code, (err) => {
