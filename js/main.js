@@ -90,23 +90,23 @@ function saveDynamicDataToFile() {
 	const fs = require('fs')
       
     // Data which will write in a file.
-    var code = editor.getValue();
+    // var code = editor.getValue();
       
-	// let data = "Learning how to write in a file."
+	let data = "Learning how to write in a file."
       
     // Write data in 'Output.txt' .
-    // fs.writeFile('Output.txt', data, (err) => {
-          
-    //     // In case of a error throw err.
-    //     if (err) throw err;
-    // })
-
-    // Write data in 'Output.txt' .
-    fs.writeFile('Output.txt', code, (err) => {
+    fs.writeFile('Output.txt', data, (err) => {
           
         // In case of a error throw err.
         if (err) throw err;
     })
+
+    // Write data in 'Output.txt' .
+    // fs.writeFile('Output.txt', code, (err) => {
+          
+    //     // In case of a error throw err.
+    //     if (err) throw err;
+    // })
 	//filename = {Problem}_{Language}
 	
 
