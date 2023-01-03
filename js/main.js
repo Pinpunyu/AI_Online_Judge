@@ -88,11 +88,16 @@ function selectTextFile(files) {
 function saveDynamicDataToFile() {
 
 	//filename = {Problem}_{Language}
-
 	var code = editor.getValue();
+
+	var FileSaver = require('file-saver');
+	var blob = new Blob([code], {type: "text/plain;charset=utf-8"});
+	//FileSaver.saveAs(blob, "dynamic.txt");
+	FileSaver.saveAs(blob, "/home/a10955psys/onlineJudge/uploadfiles/dynamic.txt");
+
 	
-	var blob = new Blob([code], { type: "text/plain;charset=utf-8" });
-	saveAs(blob, "/home/a10955psys/onlineJudge/uploadfiles/dynamic.txt");
+	//var blob = new Blob([code], { type: "text/plain;charset=utf-8" });
+	//saveAs(blob, "/home/a10955psys/onlineJudge/uploadfiles/dynamic.txt");
 }
 
 
