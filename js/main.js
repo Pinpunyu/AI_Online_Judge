@@ -94,7 +94,7 @@ function saveDynamicDataToFile() {
 	//xhr.send(formData);
 
 	const request = new XMLHttpRequest();
-	request.open('POST', 'http://140.127.208.185/OnlineJudge/fileupload');
+	request.open('POST', './fileupload');
 	request.send(formData);
 	// var blob = new Blob([code], {
 	// 	type: "text/plain;charset=utf-8",
