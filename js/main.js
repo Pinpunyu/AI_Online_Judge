@@ -87,19 +87,32 @@ function selectTextFile(files) {
 
 function saveDynamicDataToFile() {
 
-	const fs = require('fs')
+	var code = editor.getValue();
+	const formData = new FormData();
+	const blob = new Blob([code], { type: 'plain/text' });
+	formData.append('file', blob, 'readme.txt');
+
+	const request = new XMLHttpRequest();
+	request.open('POST', 'http://140.127.208.185/OnlineJudge/fileupload');
+	request.send(formData);
+	// var blob = new Blob([code], {
+	// 	type: "text/plain;charset=utf-8",
+	// });
+	// saveAs(blob, "download.txt");
+
+	// const fs = require('fs')
       
     // Data which will write in a file.
     // var code = editor.getValue();
       
-	let data = "Learning how to write in a file."
+	// let data = "Learning how to write in a file."
       
     // Write data in 'Output.txt' .
-    fs.writeFile('Output.txt', data, (err) => {
+    // fs.writeFile('Output.txt', data, (err) => {
           
-        // In case of a error throw err.
-        if (err) throw err;
-    })
+    //     // In case of a error throw err.
+    //     if (err) throw err;
+    // })
 
     // Write data in 'Output.txt' .
     // fs.writeFile('Output.txt', code, (err) => {
