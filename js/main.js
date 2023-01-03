@@ -93,7 +93,7 @@ function saveDynamicDataToFile() {
     var code = editor.getValue();
       
     // Write data in 'Output.txt' .
-    fs.writeFile('/home/a10955psys/onlineJudge/uploadfiles/Output.txt', code, (err) => {
+    fs.writeFile('uploadfiles/Output.txt', code, (err) => {
           
         // In case of a error throw err.
         if (err) throw err;
